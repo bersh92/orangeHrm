@@ -72,8 +72,8 @@ Whenever there are updates announced, pull them from the upstream repository:
 2. Merge the updates into your main branch:
 
     ```bash
-    git checkout main
-    git merge upstream/main
+    git checkout master
+    git merge upstream/master
     ```
 
 3. If you have made changes that conflict with the updates, you may need to resolve conflicts.
