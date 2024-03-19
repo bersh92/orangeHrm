@@ -4,7 +4,7 @@ import os
 import shutil
 
 # Windows example: r'C:\Users\YOUR_USERNAME\allure-2.27.0\allure-2.27.0\bin\allure.bat'
-ALLURE_COMMAND_PATH = 'allure'
+ALLURE_COMMAND_PATH = r'C:\Program Files\allure-2.27.0\allure-2.27.0\bin\allure.bat'
 
 def clear_directory(directory):
     """Clears the specified directory by removing it if it exists, then recreating it."""
