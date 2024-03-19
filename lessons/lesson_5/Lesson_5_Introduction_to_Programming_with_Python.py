@@ -27,6 +27,7 @@ def demonstrate_lists():
     a_list.append("New Element")
     print("After Append:", a_list)
 
+
     # Accessing list elements
     print("Second Element:", a_list[1])
 
