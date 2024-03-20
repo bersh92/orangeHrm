@@ -38,11 +38,17 @@ time.sleep(3)
 driver.find_element(By.XPATH, '//i[text()="add"]').click()
 time.sleep(2)
 
-enabled_button = driver.find_element(By.XPATH, '//label[text()="Enabled"]')
-disabled_button = driver.find_element(By.XPATH, '//label[text()="Disabled"]')
-if enabled_button.is_selected():
+enabled_button = driver.find_element(By.XPATH, '//label[text()="Enabled"]/..')
+disabled_button = driver.find_element(By.XPATH, '//label[text()="Disabled"]/..')
+
+if 'selected-option' in enabled_button.get_attribute('class'):
     disabled_button.click()
     time.sleep(2)
-elif disabled_button.is_selected():
-    time.sleep(2)
+    driver.find_element(By.XPATH, '//button[contains(text(),"×")]').click()
+    time.sleep(5)
+elif 'selected-option' in disabled_button.get_attribute('class'):
+    driver.find_element(By.XPATH,'//button[contains(text(),"×")]').click()
+    time.sleep(5)
+
+
 driver.quit()
