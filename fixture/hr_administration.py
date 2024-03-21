@@ -3,6 +3,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 class HrAdministration:
     add_user_button = "//div[@id='systemUserDiv'] //*[text()='add']"
+    filter_icon = "//a[@ng-click='navbar.filter()']"
 
     def __init__(self, step: StepHelper, wd: WebDriver):
         self.step = step
@@ -10,3 +11,6 @@ class HrAdministration:
 
     def click_add_user(self):
         self.step.click_on_element(self.add_user_button)
+
+    def click_filter_icon(self):
+        self.step.click_on_element(self.filter_icon)
