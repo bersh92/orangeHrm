@@ -16,5 +16,5 @@ def test_case_4_verify_that_a_user_can_be_filtered_by_username(app):
     app.assert_that(app.orangeHrm.popUp.get_filter_table_name()).is_equal_to("Filter Users")
     app.orangeHrm.popUp.set_user_name_filter("admin")
     app.orangeHrm.popUp.click_filter_search_button()
-    app.assert_that(app.orangeHrm.hrAdministration.get_filtered_username()).is_equal_to("admin")
-    app.assert_that(app.orangeHrm.hrAdministration.get_filtered_user_role()).is_equal_to("Global Admin")
+    app.assert_that(app.orangeHrm.hrAdministration.get_filtered_usernames()).is_equal_to(["admin"])
+    app.assert_that(app.orangeHrm.hrAdministration.get_filtered_user_role()).is_equal_to(["Global Admin"])
