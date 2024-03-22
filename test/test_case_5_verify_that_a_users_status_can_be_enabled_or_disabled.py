@@ -17,6 +17,6 @@ def test_case_5_verify_that_a_users_status_can_be_enabled_or_disabled(app):
     app.orangeHrm.popUp.set_user_name_filter("someuser")
     app.orangeHrm.popUp.click_filter_search_button()
     app.assert_that(app.orangeHrm.hrAdministration.get_filter_no_record_message()).is_equal_to("No Records Found")
-    #it's not neccessary assertation ,olso i don't  understand how to figure out it
+    #it's not neccessary assertation ,also i don't  understand how to figure out it
     #because it always will give True as xapth goes to element that are always present(no matter is it empty or not)
     #app.assert_that(app.orangeHrm.hrAdministration.make_sure_that_user_not_found()).is_equal_to(False)
