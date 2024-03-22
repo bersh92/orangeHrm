@@ -29,4 +29,11 @@ class HrAdministration:
         return self.step.get_element_text(self.filter_no_records_message)
 
     def make_sure_that_user_not_found(self):
-        return self.step.specified_element_is_present(self.filtered_usernames)
+        if not self.step.specified_element_is_present(self.filtered_usernames):
+            return True
+        else:
+            elements = self.step.get_list_of_elements(self.filtered_usernames)
+            if not elements:
+                return True
+            else:
+                return False
