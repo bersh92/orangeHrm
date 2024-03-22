@@ -22,7 +22,7 @@ def sum_two_numbers():
 
 
 def greet_user():
-    """Task 4: Use the input() function to ask the user for their name and greet them.пш"""
+    """Task 4: Use the input() function to ask the user for their name and greet them."""
     print('\ngreet_user():')
     def greet(name):
         return "Hello, " + name + "!"
