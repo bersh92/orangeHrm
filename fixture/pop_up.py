@@ -9,6 +9,10 @@ class PopUp:
     confirm_password_field = '#confirmpassword'
     save_button = '#modal-save-button'
     user_exists_error_massage = "//span[text()='Already exists']"
+    pass_required_message = '//input[@id="password"]/following::span[text()="Required"]'
+    confirm_pass_required_message = '//input[@id="confirmpassword"]/following::span[text()="Required"]'
+    pass_length_message = '//input[@id="password"]/following::span[text()="Your password should have at least 8 characters."]'
+    pass_strength_message = '.password-strength-check'
 
     def __init__(self, step: StepHelper, wd: WebDriver):
         self.step = step
@@ -31,3 +35,22 @@ class PopUp:
 
     def get_user_exist_error(self):
         return self.step.get_element_text(self.user_exists_error_massage)
+
+    def click_on_password_field(self):
+        self.step.click_on_element(self.password_field)
+
+    def get_pass_required_message(self):
+        return self.step.get_element_text(self.pass_required_message)
+
+    def get_confirm_pass_required_message(self):
+        return self.step.get_element_text(self.confirm_pass_required_message)
+
+    def input_in_pass_field(self,text):
+        self.step.input_text(self.password_field, text)
+
+    def get_pass_field_length_message(self):
+        return self.step.get_element_text(self.pass_length_message)
+
+    def get_pass_strength_message(self):
+        return self.step.get_element_text(self.pass_strength_message)
+

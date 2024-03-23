@@ -7,3 +7,12 @@
 # 3. Observe the password strength indicator.
 # Expected Result:
 # The password strength indicator should display a 'Very Weak' message.
+def test_case_8_Verify_Password_Strength_Indicator_Very_Weak(app):
+    app.orangeHrm.openUrl("https://portnov_admin-trials711.orangehrmlive.com/client/#/dashboard")
+    app.orangeHrm.login_to_the_application()
+    app.assert_that(app.orangeHrm.get_header_text()).is_equal_to('Employee Management')
+    app.orangeHrm.sideMenu.click_on_side_menu_button('HR Administration')
+    app.orangeHrm.hrAdministration.click_add_user()
+    app.orangeHrm.popUp.input_in_pass_field("00000000")
+    app.orangeHrm.popUp.click_on_save()
+    app.assert_that(app.orangeHrm.popUp.get_pass_strength_message()).is_equal_to("Very Weak")
