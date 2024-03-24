@@ -8,7 +8,7 @@ Open the web application in a browser.
 Log into the application with provided credentials.
 From the side menu, navigate to the "HR Administration" section.
 Click on the "Add User" button.
-Locate the user status option on the "Add User" formf.
+Locate the user status option on the "Add User" form.
 Check the current status of the user. If it is not "Disabled," you need to select the "Disabled" option.
 Ensure your script can handle both conditions: if the status is already "Disabled," it remains unchanged; otherwise, change it to "Disabled."
 '''
