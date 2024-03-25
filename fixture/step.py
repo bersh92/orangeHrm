@@ -32,7 +32,7 @@ class StepHelper:
             return False
         return True
 
-    def click_on_element(self, locator, scrollInToView=False):
+    def  click_on_element(self, locator, scrollInToView=False):
         WebDriverWait(self.wd, 15).until(
             EC.visibility_of_element_located((self.get_how(locator), locator)))
         element = WebDriverWait(self.wd, 15).until(
@@ -108,7 +108,7 @@ class StepHelper:
         elements = self.get_list_of_elements(locator)
         for element in elements:
             ActionChains(self.wd).scroll_to_element(element).perform()
-            time.sleep(1)
+            time.sleep(3)
             name = element.text
             if name == text:
                 element.click()
