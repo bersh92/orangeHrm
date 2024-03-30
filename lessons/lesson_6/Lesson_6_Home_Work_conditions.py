@@ -5,7 +5,7 @@ Objective: Perform the same initial steps as the previous assignment to log into
 Steps:
 
 Open the web application in a browser.
-Log into the application with provided credentials.
+Log into the application with provided credentials.1
 From the side menu, navigate to the "HR Administration" section.
 Click on the "Add User" button.
 Locate the user status option on the "Add User" form.

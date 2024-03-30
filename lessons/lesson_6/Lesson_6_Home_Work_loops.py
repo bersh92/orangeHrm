@@ -5,7 +5,7 @@ Objective: Open the web application, log in, navigate to the "HR Administration"
 Steps:
 
 Open the web application in a browser.
-Log into the application with provided credentials.
+Log into the application with provided credentials.1
 From the side menu, navigate to the "HR Administration" section.
 Click on the "Add User" button, usually represented by a big green button.
 On the "Add User" form, identify all input fields related to user information.
